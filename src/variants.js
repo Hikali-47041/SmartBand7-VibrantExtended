@@ -4,21 +4,21 @@ const EDIT_BARS = {
     dataType: hmUI.data_type.STEP,
     url: "activityAppScreen",
     font: "sm_yellow",
-    color: 0xffe30b,
+    color: 0xffac33,
   },
   consume: {
     value: 1,
     dataType: hmUI.data_type.CAL,
     url: "activityAppScreen",
     font: "sm_orange",
-    color: 0xff8a00,
+    color: 0xf15a22,
   },
   pai: {
     value: 2,
     dataType: hmUI.data_type.PAI_WEEKLY,
     url: "pai_app_Screen",
     font: "sm_blue",
-    color: 0x5f64fa,
+    color: 0x8e6ae8,
   },
   battery: {
     value: 3,
@@ -26,44 +26,44 @@ const EDIT_BARS = {
     unit: "fonts/sm_green/10.png",
     url: false,
     font: "sm_green",
-    color: 0x02fa7a,
+    color: 0x2cde85,
   },
   heartrate: {
     value: 4,
     dataType: hmUI.data_type.HEART,
     url: "heart_app_Screen",
     font: "sm_red",
-    color: 0xff0038,
+    color: 0xe974a3,
   },
   km: {
     value: 5,
     dataType: hmUI.data_type.DISTANCE,
     progressDataType: hmUI.data_type.STEP,
-    dotImage: "fonts/sm_lightblue/11.png",
+    dotImage: "fonts/sm_lightblue/10.png",
     url: "activityAppScreen",
-    font: "sm_lightblue",
-    color: 0x0dd3ff,
+    font: "sm_cyan",
+    color: 0x04bac5,
   },
   stress: {
     value: 6,
     dataType: hmUI.data_type.STRESS,
     url: "StressHomeScreen",
-    font: "sm_stress",
-    color: 0x00bd9d,
+    font: "sm_lightblue",
+    color: 0x3daee9,
   },
   stand: {
     value: 7,
     dataType: hmUI.data_type.STAND,
     url: "activityAppScreen",
     font: "sm_green",
-    color: 0x36cf6e
+    color: 0x2cde85
   },
   spo2: {
     value: 8,
     dataType: hmUI.data_type.SPO2,
     url: "spo_HomeScreen",
     font: "sm_red",
-    color: 0xff0000
+    color: 0xe974a3
   },
   void: {
     value: 99
@@ -124,9 +124,9 @@ const EDIT_WIDGETS = {
     config: {
       type: hmUI.data_type.BATTERY,
       font_array: mkImgArray("fonts/green"),
-      unit_en: "fonts/present.png",
-      unit_sc: "fonts/present.png",
-      unit_tc: "fonts/present.png",
+      unit_en: "fonts/green/present.png",
+      unit_sc: "fonts/green/present.png",
+      unit_tc: "fonts/green/present.png",
     },
   },
   humidity: {
