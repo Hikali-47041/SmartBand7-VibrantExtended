@@ -24,7 +24,7 @@ const EDIT_BARS = {
     value: 3,
     dataType: hmUI.data_type.BATTERY,
     unit: "fonts/sm_green/10.png",
-    url: false,
+    url: "Settings_batteryManagerScreen",
     font: "sm_green",
     color: 0x2cde85,
   },
@@ -120,7 +120,7 @@ const EDIT_WIDGETS = {
   },
   battery: {
     value: 3,
-    url: "",
+    url: "Settings_batteryManagerScreen",
     config: {
       type: hmUI.data_type.BATTERY,
       font_array: mkImgArray("fonts/green"),
