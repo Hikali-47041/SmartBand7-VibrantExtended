@@ -23,7 +23,7 @@ const EDIT_BARS = {
   battery: {
     value: 3,
     dataType: hmUI.data_type.BATTERY,
-    unit: "fonts/sm_green/10.png",
+    unit: "fonts/sm_green/percent.png",
     url: "Settings_batteryManagerScreen",
     font: "sm_green",
     color: 0x2cde85,
@@ -124,9 +124,9 @@ const EDIT_WIDGETS = {
     config: {
       type: hmUI.data_type.BATTERY,
       font_array: mkImgArray("fonts/green"),
-      unit_en: "fonts/green/present.png",
-      unit_sc: "fonts/green/present.png",
-      unit_tc: "fonts/green/present.png",
+      unit_en: "fonts/green/percent.png",
+      unit_sc: "fonts/green/percent.png",
+      unit_tc: "fonts/green/percent.png",
     },
   },
   humidity: {
@@ -135,6 +135,9 @@ const EDIT_WIDGETS = {
     config: {
       type: hmUI.data_type.HUMIDITY,
       font_array: mkImgArray("fonts/blue"),
+      unit_en: "fonts/blue/percent.png",
+      unit_sc: "fonts/blue/percent.png",
+      unit_tc: "fonts/blue/percent.png",
     },
   },
   steps: {
