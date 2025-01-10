@@ -295,6 +295,43 @@ const EDIT_WIDGETS = {
       });
     }
   },
+  second: {
+    value: 16,
+    url: () => {
+      hmApp.startApp({
+        appid: 33904,
+        url: 'page/MainScreen'
+      });
+    },
+    render: (y) => {
+      // digital
+      hmUI.createWidget(hmUI.widget.IMG_TIME, {
+        second_startX: 78,
+        second_startY: y + 26,
+        second_zero: 1,
+        second_array: FONT_WHITE,
+        second_algin: hmUI.align.CENTER_H,
+        show_level: hmUI.show_level.ONLY_NORMAL
+      });
+      // bg
+      hmUI.createWidget(hmUI.widget.IMG, {
+        x: 62,
+        y: y + 5,
+        w: 68,
+        h: 68,
+        src: "widgets/second/bg.png"
+      });
+      // analog
+      hmUI.createWidget(hmUI.widget.TIME_POINTER, {
+        second_centerX: 96,
+        second_centerY: y + 39,
+        second_posX: 8,
+        second_posY: 40,
+        second_path: "widgets/second/second_pointer.png",
+        show_level: hmUI.show_level.ONLY_NORMAL,
+      });
+    }
+  },
   },
   void: {
     value: 99
