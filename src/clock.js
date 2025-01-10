@@ -13,9 +13,10 @@ function renderClockWidget(isAOD) {
     optional_types: [
       { type: 0, preview: "edit/clock_digital.png" },
       { type: 1, preview: "edit/clock_analog.png" },
-      { type: 2, preview: "edit/clock_gray.png" }
+      { type: 2, preview: "edit/clock_gray.png" },
+      { type: 3, preview: "edit/clock_dotted.png" }
     ],
-    count: 3,
+    count: 4,
     tips_BG: "",
     tips_x: -1000,
     tips_y: 0,
@@ -32,6 +33,9 @@ function renderClockWidget(isAOD) {
       break;
       case 2:
         isAOD ? _renderTimeAnalog_aod('gray') : _renderTimeAnalog('gray');
+        break
+      case 3:
+        isAOD ? _renderTimeAnalog_aod('dotted') : _renderTimeAnalog('dotted');
         break
         default:
       isAOD ? _renderTimeDigital_aod() : _renderTimeDigital();
