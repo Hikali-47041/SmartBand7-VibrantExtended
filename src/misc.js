@@ -1,25 +1,41 @@
 function renderStatus() {
-  hmUI.createWidget(hmUI.widget.IMG, {
-    x: 0,
-    y: 334,
-    src: "status/bg1.png"
+  // left up
+  hmUI.createWidget(hmUI.widget.IMG_STATUS, {
+    x: 2,
+    y: 130,
+    src: 'status/alarm_enable.png',
+    type: hmUI.system_status.CLOCK
   });
+  // right up
+  hmUI.createWidget(hmUI.widget.IMG_STATUS, {
+    x: 164,
+    y: 130,
+    src: 'status/lock_enable.png',
+    type: hmUI.system_status.LOCK
+  });
+  // left down
   hmUI.createWidget(hmUI.widget.IMG, {
-    x: 166,
+    x: 2,
     y: 334,
-    src: "status/bg2.png"
+    src: "status/dnd_disable.png"
   });
   hmUI.createWidget(hmUI.widget.IMG_STATUS, {
-    x: 0,
+    x: 2,
     y: 334,
-    src: 'status/disconnect.png',
-    type: hmUI.system_status.DISCONNECT
-  });
-  hmUI.createWidget(hmUI.widget.IMG_STATUS, {
-    x: 166,
-    y: 334,
-    src: 'status/dnd.png',
+    src: 'status/dnd_enable.png',
     type: hmUI.system_status.DISTURB
+  });
+  // right down
+  hmUI.createWidget(hmUI.widget.IMG, {
+    x: 164,
+    y: 334,
+    src: "status/connection_active.png"
+  }); 
+  hmUI.createWidget(hmUI.widget.IMG_STATUS, {
+    x: 164,
+    y: 334,
+    src: 'status/connection_inactive.png',
+    type: hmUI.system_status.DISCONNECT
   });
 }
 
