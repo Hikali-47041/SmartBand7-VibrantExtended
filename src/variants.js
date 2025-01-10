@@ -332,6 +332,111 @@ const EDIT_WIDGETS = {
       });
     }
   },
+  digital_clock: {
+    value: 17,
+    url: () => {
+      hmApp.startApp({
+        appid: 33904,
+        url: 'page/MainScreen'
+      });
+    },
+    render: (y) => {
+      // hh:mm
+      hmUI.createWidget(hmUI.widget.IMG_TIME, {
+        hour_startX: 56,
+        hour_startY: y + 26,
+        hour_zero: 1,
+        hour_array: FONT_WHITE,
+        hour_unit_en: 'fonts/point.png',
+        hour_unit_sc: 'fonts/point.png',
+        hour_unit_tc: 'fonts/point.png',
+        minute_follow: 1, // Whether to follow.
+        minute_array: FONT_WHITE,
+        show_level: hmUI.show_level.ONLY_NORMAL
+      });
+    }
+  },
+  digital_date: {
+    value: 18,
+    url: () => {
+      hmApp.startApp({
+        appid: 33904,
+        url: 'page/MainScreen'
+      });
+    },
+    render: (y) => {
+      // MM-DD
+      hmUI.createWidget(hmUI.widget.IMG_DATE, {
+        month_startX: 56,
+        month_startY: y + 26,
+        month_zero: 1,
+        month_en_array: FONT_WHITE,
+        month_sc_array: FONT_WHITE,
+        month_tc_array: FONT_WHITE,
+        month_align: hmUI.align.CENTER_H,
+        month_unit_en: 'fonts/fu.png',
+        month_unit_sc: 'fonts/fu.png',
+        month_unit_tc: 'fonts/fu.png',
+        day_follow: 1, // Whether to follow.
+        day_en_array: FONT_WHITE,
+        day_sc_array: FONT_WHITE,
+        day_tc_array: FONT_WHITE,
+        day_zero: 1,
+        show_level: hmUI.show_level.ONLY_NORMAL
+      });
+    }
+  },
+  digital_datetime: {
+    value: 19,
+    url: () => {
+      hmApp.startApp({
+        appid: 33904,
+        url: 'page/MainScreen'
+      });
+    },
+    render: (y) => {
+      // MM-DD
+      hmUI.createWidget(hmUI.widget.IMG_DATE, {
+        month_startX: 56,
+        month_startY: y + 8,
+        month_zero: 1,
+        month_en_array: FONT_WHITE,
+        month_sc_array: FONT_WHITE,
+        month_tc_array: FONT_WHITE,
+        month_align: hmUI.align.CENTER_H,
+        month_unit_en: 'fonts/fu.png',
+        month_unit_sc: 'fonts/fu.png',
+        month_unit_tc: 'fonts/fu.png',
+        day_follow: 1, // Whether to follow.
+        day_en_array: FONT_WHITE,
+        day_sc_array: FONT_WHITE,
+        day_tc_array: FONT_WHITE,
+        day_zero: 1,
+        show_level: hmUI.show_level.ONLY_NORMAL
+      });
+      // separater line
+      // center: (x, y) = (96, y + 39.5)
+      hmUI.createWidget(hmUI.widget.FILL_RECT, {
+        x: 68,
+        y: y + 38,
+        w: 56,
+        h: 3,
+        color: 0xbdc3c7
+      });
+      // hh:mm
+      hmUI.createWidget(hmUI.widget.IMG_TIME, {
+        hour_startX: 56,
+        hour_startY: y + 42,
+        hour_zero: 1,
+        hour_array: FONT_WHITE,
+        hour_unit_en: 'fonts/point.png',
+        hour_unit_sc: 'fonts/point.png',
+        hour_unit_tc: 'fonts/point.png',
+        minute_follow: 1, // Whether to follow.
+        minute_array: FONT_WHITE,
+        show_level: hmUI.show_level.ONLY_NORMAL
+      });
+    }
   },
   void: {
     value: 99
