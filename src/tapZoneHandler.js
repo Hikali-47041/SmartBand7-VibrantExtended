@@ -32,6 +32,12 @@ function initTapZones(widgetURLs, barURLs) {
     const {x, y} = info
 
     if(48 < x && x < 144) {
+      if(36 < y && y < 114) {
+        return _call(widgetURLs[0]);
+      } else if(376 < y && y < 454) {
+        return _call(widgetURLs[1]);
+      }
+    }
 
     // Bars
     if(x < 96) {
