@@ -52,3 +52,13 @@ function getTbTimerState() {
 
   return `${minute}.${second}`;
 }
+
+// render background
+function renderWallpaper() {
+  hmUI.createWidget(hmUI.widget.IMG, {
+      x: 0,
+      y: 0,
+      src: "wallpaper/wallpaper.png",
+      show_level: hmUI.show_level.ONLY_NORMAL
+  });
+}
