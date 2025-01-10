@@ -194,8 +194,27 @@ const EDIT_WIDGETS = {
       });
     }
   },
-  tb_timer: {
+  sleep: {
     value: 11,
+    url: "Sleep_HomeScreen",
+    config: {
+      type: hmUI.data_type.SLEEP,
+      font_array: FONT_WHITE,
+      dot_image: 'fonts/10.png',
+    },
+  },
+  alarm: {
+    value: 12,
+    url: "AlarmInfoScreen",
+    config: {
+      type: hmUI.data_type.ALARM_CLOCK,
+      font_array: FONT_WHITE,
+      padding: 1,
+    },
+  },
+
+  tb_timer: {
+    value: 13,
     url: () => {
       hmApp.startApp({
         appid: 33904,
@@ -227,23 +246,55 @@ const EDIT_WIDGETS = {
       });
     }
   },
-  sleep: {
-    value: 12,
-    url: "Sleep_HomeScreen",
-    config: {
-      type: hmUI.data_type.SLEEP,
-      font_array: FONT_WHITE,
-      dot_image: 'fonts/white/10.png',
+  tb_timer2: {
+    value: 14,
+    url: () => {
+      hmApp.startApp({
+        appid: 33904,
+        url: 'page/MainScreen'
+      });
     },
+    render: (y) => {
+      hmUI.createWidget(hmUI.widget.IMG, {
+        x: 74,
+        y,
+        src: `widgets/icon/toolbox.png`,
+        show_level: hmUI.show_level.ONLY_NORMAL
+      });
+      const view = hmUI.createWidget(hmUI.widget.TEXT_IMG, {
+        x: 48,
+        y: y + 48,
+        w: 96,
+        h: 30,
+        align_h: hmUI.align.CENTER_H,
+        negative_image: "fonts/fu.png",
+        dot_image: 'fonts/point.png',
+        show_level: hmUI.show_level.ONLY_NORMAL,
+        text: getTbTimerState(),
+        font_array: FONT_WHITE,
+      });
+
+      timer.createTimer(0, 500, () => {
+        view.setProperty(hmUI.prop.TEXT, getTbTimerState());
+      });
+    }
   },
-  alarm: {
-    value: 13,
-    url: "AlarmInfoScreen",
-    config: {
-      type: hmUI.data_type.ALARM_CLOCK,
-      font_array: FONT_WHITE,
-      padding: 1,
+  toolbox: {
+    value: 15,
+    url: () => {
+      hmApp.startApp({
+        appid: 33904,
+        url: 'page/MainScreen'
+      });
     },
+    render: (y) => {
+      hmUI.createWidget(hmUI.widget.IMG, {
+        x: 48,
+        y,
+        src: "widgets/demo/toolbox.png"
+      });
+    }
+  },
   },
   void: {
     value: 99
