@@ -3,9 +3,9 @@
     "appId": 85859,
     "appName": "Vibrant Rewrite",
     "appType": "watchface",
-    "description": "",
+    "description": "Miband 7 default watchface extended",
     "icon": "preview.png",
-    "vender": "melianmiko",
+    "vender": "hikali",
     "version": {
       "code": 1,
       "name": "1.0"

@@ -16,12 +16,14 @@ __$$module$$__.module = DeviceRuntimeCore.WatchFace({
         return;
 
       default:
+        renderWallpaper();
         const barUrls = renderBars();
         const widgetUrls = renderWidgets();
         renderStatus();
         renderClockWidget(false);
+        const overlappedWallpaper = renderWallpaper(true);
 
-        initTapZones(widgetUrls, barUrls);
+        initTapZones(widgetUrls, barUrls, overlappedWallpaper);
 
     }
   }
