@@ -21,8 +21,9 @@ __$$module$$__.module = DeviceRuntimeCore.WatchFace({
         const widgetUrls = renderWidgets();
         renderStatus();
         renderClockWidget(false);
+        const overlappedWallpaper = renderWallpaper(true);
 
-        initTapZones(widgetUrls, barUrls);
+        initTapZones(widgetUrls, barUrls, overlappedWallpaper);
 
     }
   }

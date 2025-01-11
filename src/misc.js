@@ -53,12 +53,30 @@ function getTbTimerState() {
   return `${minute}.${second}`;
 }
 
-// render background
-function renderWallpaper() {
-  hmUI.createWidget(hmUI.widget.IMG, {
+// getProperty() is not work well
+// ref: https://docs.zepp.com/docs/1.0/watchface/api/hmUI/getProperty/ 
+class Wallpaper {
+  constructor(alpha = 255) {
+    this.alpha = alpha;
+    this.widgets = hmUI.createWidget(hmUI.widget.IMG, {
       x: 0,
       y: 0,
       src: "wallpaper/wallpaper.png",
+      alpha: alpha,
       show_level: hmUI.show_level.ONLY_NORMAL
-  });
+    });
+  }
+
+  getAlpha() {
+    return this.alpha;
+  }
+  setAlpha(alpha) {
+    this.alpha = alpha;
+    this.widgets.setProperty(hmUI.prop.MORE, {alpha: alpha});
+  }
+}
+
+// render background
+function renderWallpaper(isOverlapped = false) {
+    return new Wallpaper(isOverlapped ? 0 : 51);
 }

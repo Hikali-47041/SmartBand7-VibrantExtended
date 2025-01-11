@@ -12,7 +12,12 @@ function _changeBrightness(delta) {
     hmSetting.setBrightness(val);
 }
 
-function initTapZones(widgetURLs, barURLs) {
+function reverseAlpha(widgets) {
+  widgets.setAlpha(255 - widgets.getAlpha());
+  // widgets.setProperty(hmUI.prop.MORE, {alpha: 255 - widgets.getProperty(hmUI.prop.MORE, {})["alpha"]});
+}
+
+function initTapZones(widgetURLs, barURLs, wallpaperWidgets) {
   let mustHandle = false;
 
   const zone = hmUI.createWidget(hmUI.widget.IMG, {
@@ -31,9 +36,12 @@ function initTapZones(widgetURLs, barURLs) {
 
     const {x, y} = info
 
+    // Widgets
     if(48 < x && x < 144) {
       if(36 < y && y < 114) {
         return _call(widgetURLs[0]);
+      } else if(160 < y && y < 330) {
+        return reverseAlpha(wallpaperWidgets);
       } else if(376 < y && y < 454) {
         return _call(widgetURLs[1]);
       }
