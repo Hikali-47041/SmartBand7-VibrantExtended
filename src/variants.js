@@ -418,9 +418,9 @@ const EDIT_WIDGETS = {
       // center: (x, y) = (96, y + 39.5)
       hmUI.createWidget(hmUI.widget.FILL_RECT, {
         x: 68,
-        y: y + 38,
+        y: y + 39,
         w: 56,
-        h: 3,
+        h: 1,
         color: 0xbdc3c7
       });
       // hh:mm
