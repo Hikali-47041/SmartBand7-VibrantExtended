@@ -9,22 +9,11 @@ __$$module$$__.module = DeviceRuntimeCore.WatchFace({
         renderClockWidget(true);
         return;
 
-      case hmSetting.screen_type.SETTINGS:
-        renderWidgets();
-        renderBars();
-        renderClockWidget(false);
-        return;
-
       default:
-        renderWallpaper();
-        const barUrls = renderBars();
-        const widgetUrls = renderWidgets();
+        renderBars();
+        renderWidgets();
         renderStatus();
         renderClockWidget(false);
-        const overlappedWallpaper = renderWallpaper(true);
-
-        initTapZones(widgetUrls, barUrls, overlappedWallpaper);
-
     }
   }
 });

@@ -1,20 +1,20 @@
 {
   "app": {
-    "appId": 85859,
-    "appName": "Vibrant Rewrite",
+    "appId": 85860,
+    "appName": "Vibrant Rewrite minimal",
     "appType": "watchface",
     "description": "Miband 7 default watchface extended",
     "icon": "preview.png",
     "vender": "hikali",
     "version": {
-      "code": 1,
-      "name": "1.0"
+      "code": 2,
+      "name": "1.1"
     }
   },
   "configVersion": "v2",
   "module": {
     "watchface": {
-      "editable": 1,
+      "editable": 0,
       "hightCost": 0,
       "lockscreen": 1,
       "main": 1,
